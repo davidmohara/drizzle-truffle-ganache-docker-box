@@ -24,8 +24,9 @@ services:
       sh -c "truffle compile &&
              truffle test &&
              truffle migrate &&
+             mkdir -p client/src/contracts &&
              cp -R output/contracts/* client/src/contracts/ &&
-             cd client && npm i env -g &&
+             cd client &&
              npm start"
     ports:
       - 3001:3000
@@ -47,7 +48,7 @@ services:
              truffle test &&
              truffle migrate &&
              cp -R output/contracts/* client/src/contracts-api/ &&
-             cd client &&
+             cd client && npm i env -g && 
              npm start"
     ports:
       - 3000:3000
