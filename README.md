@@ -1,4 +1,7 @@
-# Drizzle Truffle Ganache Docker Box
+# Proyecto - TP Programación Concurrentes 2020 - Solidity 
+
+
+# Basado en : Drizzle Truffle Ganache Docker Box
 
 This box followed the official drizzle tutorial (https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react), but built on top of docker/docker-compose.
 
