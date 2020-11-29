@@ -1,3 +1,4 @@
 .idea/
 node_modules/
 truffledrizzle/client/src/contracts/
+votation-dapp/client/src/contracts/
