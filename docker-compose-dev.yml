@@ -25,7 +25,7 @@ services:
              truffle test &&
              truffle migrate &&
              cp -R output/contracts/* client/src/contracts/ &&
-             cd client &&
+             cd client && npm i env -g &&
              npm start"
     ports:
       - 3001:3000
