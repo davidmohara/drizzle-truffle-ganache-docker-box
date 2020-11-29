@@ -40,7 +40,7 @@ COPY client/package-lock.json ./client/package-lock.json
 #RUN cd client && npm ci
 
 # Hacemos el Build de la app React
-RUN cd client && npm i web3@1.0.0-beta.37 && npm install && npm run build
+RUN cd client && npm i web3@1.0.0-beta.37 && npm install 
 
 #RUN npm run build
 
