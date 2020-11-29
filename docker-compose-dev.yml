@@ -16,7 +16,7 @@ services:
     build:
       context: truffledrizzle
     healthcheck:
-      test: curl -sf -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' localhost:8545
+      test: curl -sf -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' ganache-cli:8545
       interval: 5s
       timeout: 5s
       retries: 5
@@ -24,11 +24,12 @@ services:
       sh -c "truffle compile &&
              truffle test &&
              truffle migrate &&
-             cp -R output/contracts client/src/contracts/ &&
+             cp -R output/contracts/* client/src/contracts/ &&
              cd client &&
              npm start"
     ports:
       - 3000:3000
     tty: true
     volumes:
-      - ./truffledrizzle/client/src:/client/src
+      - ./truffledrizzle/client/src:/app/client/src
+
